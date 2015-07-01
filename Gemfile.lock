@@ -1,0 +1,103 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.2.8)
+    coderay (1.1.0)
+    diff-lcs (1.2.5)
+    facter (2.4.4)
+      CFPropertyList (~> 2.2.6)
+    ffi (1.9.10)
+    formatador (0.2.5)
+    guard (2.12.7)
+      formatador (>= 0.2.4)
+      listen (>= 2.7, <= 4.0)
+      lumberjack (~> 1.0)
+      nenv (~> 0.1)
+      notiffany (~> 0.0)
+      pry (>= 0.9.12)
+      shellany (~> 0.0)
+      thor (>= 0.18.1)
+    guard-kitchen (0.0.2)
+      guard
+      mixlib-shellout
+    hiera (2.0.0)
+      json_pure
+    json_pure (1.8.2)
+    kitchen-docker (2.1.0)
+      test-kitchen (>= 1.0.0)
+    kitchen-puppet (0.0.28)
+    listen (3.0.1)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+    lumberjack (1.0.9)
+    method_source (0.8.2)
+    mixlib-shellout (2.1.0)
+    multi_json (1.11.1)
+    nenv (0.2.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.2)
+    net-telnet (0.1.1)
+    notiffany (0.0.6)
+      nenv (~> 0.1)
+      shellany (~> 0.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    puppet (4.2.0)
+      facter (> 2.0, < 4)
+      hiera (>= 2.0, < 3)
+      json_pure
+    rake (10.4.2)
+    rb-fsevent (0.9.5)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.1)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
+    safe_yaml (1.0.4)
+    serverspec (2.19.0)
+      multi_json
+      rspec (~> 3.0)
+      rspec-its
+      specinfra (~> 2.35)
+    shellany (0.0.1)
+    slop (3.6.0)
+    specinfra (2.36.10)
+      net-scp
+      net-ssh
+      net-telnet
+    test-kitchen (1.4.1)
+      mixlib-shellout (>= 1.2, < 3.0)
+      net-scp (~> 1.1)
+      net-ssh (~> 2.7)
+      safe_yaml (~> 1.0)
+      thor (~> 0.18)
+    thor (0.19.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  guard
+  guard-kitchen
+  kitchen-docker
+  kitchen-puppet
+  puppet
+  rake
+  serverspec
+  test-kitchen

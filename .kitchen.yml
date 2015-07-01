@@ -1,0 +1,26 @@
+---
+driver:  
+  name: docker
+  provision_command:
+    - curl -L https://www.getchef.com/chef/install.sh | bash
+    - rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+    - yum -y install puppet-3.3.0
+  require_chef_omnibus: false
+
+provisioner:  
+  name: puppet_apply
+  puppet_version: 3.3.0
+  manifests_path: manifests
+  modules_path: modules
+  require_chef_for_busser: false
+
+platforms:  
+  - name: centos
+    driver_config:
+      platform: centos
+      image: centos:centos6
+      socket: <%= ENV['DOCKER_HOST'] %>
+      use_cache: true
+
+suites:  
+  - name: foo
